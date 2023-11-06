@@ -4,19 +4,21 @@
 }
 .navbar{
     width: 100%;
-    height: 50px;
+    height: 140px;
     padding: 0px;
     margin: 0px;
     background-color: gainsboro;
+
 }
 .navbarlist{
     display: flex;
     width: 100%;
     list-style: none;
     justify-content: space-around;
+    background: #172124;
+
 }
 .navbarlist button{
-    appearance: none;
     background-color: #000000;
     border: 2px solid #1A1A1A;
     border-radius: 15px;
@@ -28,7 +30,7 @@
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
-    margin: 0;
+    margin: 40px;
     min-height: 60px;
     min-width: 0;
     outline: none;
@@ -41,8 +43,6 @@
     touch-action: manipulation;
     width: 100%;
     will-change: transform;
-
-
 }
 .navbarlist button:disabled {
   pointer-events: none;
