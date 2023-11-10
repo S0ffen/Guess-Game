@@ -1,81 +1,24 @@
-*{
-  margin: 0px;
-  padding: 0px;
+body{
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, #e4c7a7, #d245db, #a22dce, rgb(41, 110, 101), #4d56bd);
 }
-.navbar{
-  width: 100%;
-  height: 80px;
-  padding: 0px;
-  margin: 0px;
-  background-color: gainsboro;
-
-}
-.navbarlist{
+.mainContainer{
+  
   display: flex;
-  width: 100%;
-  list-style: none;
-  justify-content: space-around;
+  justify-content: center;
+  min-height: 80vh;
+ 
+  text-align: center;
+  
+  
   
 }
-.navbarlist button a{
-  text-decoration: none;
-  color: white
+.guess{
+  visibility: hidden;
 }
-
-
-
-
-.navbarlist button {
-  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
-  border: 0;
-  border-radius: 12px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 2.5;
-  outline: transparent;
-  padding: 0 1rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .2s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
+.game{
+  padding-top: 250px;
+  display: none;
+  background-color: blue;
+  min-width: 35vh
 }
-
-.navbarlist button:not([disabled]):focus {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
-}
-
-.navbarlist button:not([disabled]):hover {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
-}
-
- .geeks {
-        border-bottom: 5px solid white;
-        overflow: hidden;
-        animation: animate 2s linear forwards;
-    }
- 
-    .geeks h1 {
-        color: green;
-    }
- 
-    @keyframes animate {
-        0% {
-            width: 0px;
-            height: 0px;
-        }
-        30% {
-            width: 50px;
-            height: 0px;
-        }
-        60% {
-            width: 50px;
-            height: 80px;
-        }
-    }
