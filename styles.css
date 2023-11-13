@@ -1,6 +1,6 @@
 body{
   min-height: 100vh;
-  background-image: linear-gradient(to right bottom, #e4c7a7, #d245db, #a22dce, rgb(41, 110, 101), #4d56bd);
+  background-color:gray;
 }
 .mainContainer{
   
@@ -13,7 +13,7 @@ body{
   
   
 }
-.guess{
+.hidden{
   visibility: hidden;
 }
 .game{
@@ -21,4 +21,10 @@ body{
   display: none;
   background-color: blue;
   min-width: 35vh
+}
+.informationAboutPreviousGuesses{
+  float: left;
+}
+.previousNumber{
+  float: right;
 }
