@@ -1,3 +1,4 @@
+
 var userInput = document.querySelector(".userInput")
 
 var previous = []
@@ -25,14 +26,22 @@ userInput.addEventListener("keyup",function(e){
     
     console.log(parseInt(userInput.value))
     if(e.key === "Enter" && userInput.value <= 0){
-        alert("dont leave blank input")
+        Swal.fire({
+            icon: "error",
+            title: "Wrong value",
+            text: "Only numbers between 1-100 are acceptable",
+          });
     }
 
     if(e.key ==="Enter"  && parseInt(userInput.value)>101){
-        alert("wrong number")
+        Swal.fire({
+            icon: "error",
+            title: "Wrong number",
+            text: "Only numbers between 1-100 are acceptable",
+          });
     }
     
-    if(e.key === 'Enter' && userInput.value > 0 && parseInt(userInput.value)<101){
+    if(e.key === 'Enter' && userInput.value > 0 && parseInt(userInput.value)<101 && Guesses != 15){
        previous.push(userInput.value)
        document.querySelector(".previousNumber").classList.remove("hidden")
        document.querySelector(".previousNumber").innerHTML = previous
@@ -43,6 +52,11 @@ userInput.addEventListener("keyup",function(e){
         textafterGuess.classList.remove("hidden")
         textafterGuess.innerHTML = "You Guess it"
         Guesses ++
+        Swal.fire({
+            icon: "success",
+            title: "You Guess it",
+          });
+        document.querySelector(".resetButton").classList.remove("hidden")
     }
     else if(e.key === 'Enter' &&  parseInt(userInput.value) > randomNumber && Guesses != 15){
         textafterGuess.classList.remove("hidden")
@@ -57,6 +71,7 @@ userInput.addEventListener("keyup",function(e){
     else if((e.key === 'Enter' && parseInt(userInput.value) < randomNumber && Guesses == 15)){
         textafterGuess.classList.remove("hidden")
         textafterGuess.innerHTML = "You lose"
+        document.querySelector(".resetButton").classList.remove("hidden")
     }
     console.log(Guesses)
 })

@@ -20,11 +20,20 @@ body{
   padding-top: 250px;
   display: none;
   background-color: blue;
-  min-width: 35vh
+  min-width: 55%
 }
 .informationAboutPreviousGuesses{
   float: left;
 }
 .previousNumber{
   float: right;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+.resetB{
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+
 }
