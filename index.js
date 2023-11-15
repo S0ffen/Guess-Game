@@ -51,12 +51,13 @@ userInput.addEventListener("keyup",function(e){
     if(e.key === 'Enter' &&  parseInt(userInput.value) === randomNumber && Guesses != 15  ) {
         textafterGuess.classList.remove("hidden")
         textafterGuess.innerHTML = "You Guess it"
-        Guesses ++
+        Guesses = 15
         Swal.fire({
             icon: "success",
             title: "You Guess it",
           });
         document.querySelector(".resetButton").classList.remove("hidden")
+        document.querySelector("input").readOnly = "true"
     }
     else if(e.key === 'Enter' &&  parseInt(userInput.value) > randomNumber && Guesses != 15){
         textafterGuess.classList.remove("hidden")
@@ -72,6 +73,7 @@ userInput.addEventListener("keyup",function(e){
         textafterGuess.classList.remove("hidden")
         textafterGuess.innerHTML = "You lose"
         document.querySelector(".resetButton").classList.remove("hidden")
+        document.querySelector("input").readOnly = "true"
     }
     console.log(Guesses)
 })

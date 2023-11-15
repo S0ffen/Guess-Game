@@ -1,25 +1,42 @@
-body{
-  min-height: 100vh;
-  background-color:gray;
+.fancy-border {
+  border: 25px solid #B88846;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
 }
+
+
+
+/**
+ * Pen Specific
+ * ============
+*/
+
+body {
+  background: #0B1319;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
 .mainContainer{
-  
+  border: 25px solid #B88846;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
   display: flex;
   justify-content: center;
-  min-height: 80vh;
- 
+  align-items: center;
+  min-height: 35vh;
   text-align: center;
-  
-  
+  background-color: rgb(248, 241, 233);
   
 }
+
+
 .hidden{
   visibility: hidden;
 }
 .game{
-  padding-top: 250px;
   display: none;
-  background-color: blue;
   min-width: 55%
 }
 .informationAboutPreviousGuesses{
@@ -36,4 +53,132 @@ body{
     justify-content: center;
     align-items: center;
 
+}
+.buttonDifficulty{
+  display: flex;
+  align-items: center;
+  
+}
+
+
+
+
+
+.buttonEasyD {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.buttonEasyD:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.buttonEasyD:hover:after {
+  transform: translate(0, 0);
+}
+
+.buttonEasyD:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.buttonEasyD:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .buttonEasyD {
+    padding: 0 40px;
+  }
+}
+
+
+
+
+.buttonhardD {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.buttonhardD:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.buttonhardD:hover:after {
+  transform: translate(0, 0);
+}
+
+.buttonhardD:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.buttonhardD:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .buttonhardD {
+    padding: 0 40px;
+  }
 }

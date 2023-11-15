@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    
     <title>Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -12,8 +13,12 @@
     <div class="mainContainer">
         <div class="selectDifficulty">
             <h2>Select Difficulty:</h2>
-            <button class="buttonEasyD" onclick="easyMode()">Easy difficulty 15 attemps (1-100)</button>
-            <button class="buttonhardD">Hard difficulty 10 attemps(1-100)</button>
+            <div class="buttonsDifficulty">
+                <button class="buttonEasyD" onclick="easyMode()">Easy difficulty 15 attemps (1-100)</button>
+                <br>
+                <br>
+                <button class="buttonhardD">Hard difficulty 10 attemps(1-100)</button>
+            </div>
         </div>
             <div class="game">
                 <h2 class="number">Your Guess</h2>
