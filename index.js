@@ -29,7 +29,7 @@ function easyMode(){
               });
         }
     
-        if(e.key ==="Enter"  && parseInt(userInput.value)>101){
+        if(e.key ==="Enter"  && parseInt(userInput.value)>=101){
             Swal.fire({
                 icon: "error",
                 title: "Wrong number",
@@ -66,16 +66,16 @@ function easyMode(){
             Guesses ++
         }
         else if((e.key === 'Enter' && Guesses === 14)){
-            if(e.key === 'Enter' &&  parseInt(userInput.value) === randomNumber && Guesses != 15  ) {
+            if(e.key === 'Enter' &&  parseInt(userInput.value) === randomNumber) {
                 textafterGuess.classList.remove("hidden")
                 textafterGuess.innerHTML = "You Guess it"
-                Guesses = 10
                 Swal.fire({
                     icon: "success",
                     title: "You Guess it",
                   });
                 document.querySelector(".resetButton").classList.remove("hidden")
                 document.querySelector("input").readOnly = "true"
+                Guesses++
             }
             else{
             textafterGuess.classList.remove("hidden")
@@ -101,7 +101,7 @@ function hardMode(){
               });
         }
     
-        if(e.key ==="Enter"  && parseInt(userInput.value)>101){
+        if(e.key ==="Enter"  && parseInt(userInput.value)>=101){
             Swal.fire({
                 icon: "error",
                 title: "Wrong number",
