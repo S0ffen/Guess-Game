@@ -65,24 +65,11 @@ function easyMode(){
             textafterGuess.innerHTML = "Higher"
             Guesses ++
         }
-        else if((e.key === 'Enter' && Guesses === 14)){
-            if(e.key === 'Enter' &&  parseInt(userInput.value) === randomNumber) {
-                textafterGuess.classList.remove("hidden")
-                textafterGuess.innerHTML = "You Guess it"
-                Swal.fire({
-                    icon: "success",
-                    title: "You Guess it",
-                  });
-                document.querySelector(".resetButton").classList.remove("hidden")
-                document.querySelector("input").readOnly = "true"
-                Guesses++
-            }
-            else{
+        else if((e.key === 'Enter' && parseInt(userInput.value) != randomNumber && Guesses === 15)){
             textafterGuess.classList.remove("hidden")
             textafterGuess.innerHTML = "You lose"
             document.querySelector(".resetButton").classList.remove("hidden")
             document.querySelector("input").readOnly = "true"
-            }
         }
         console.log(Guesses)
     })
@@ -137,7 +124,7 @@ function hardMode(){
             textafterGuess.innerHTML = "Higher"
             Guesses ++
         }
-        else if((e.key === 'Enter' && parseInt(userInput.value) < randomNumber && Guesses === 10)){
+        else if((e.key === 'Enter' && parseInt(userInput.value) != randomNumber && Guesses === 10)){
             textafterGuess.classList.remove("hidden")
             textafterGuess.innerHTML = "You lose"
             document.querySelector(".resetButton").classList.remove("hidden")
